@@ -1,0 +1,65 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.name,
+.phone {
+  width: 188px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.delete {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 10px;
+  color: var(--primary-color);
+  border: none;
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.delete:hover,
+.delete:focus {
+  background-color: var(--btn-accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    row-gap: 20px;
+  }
+
+  .name,
+  .phone {
+    width: 200px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .delete {
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .info {
+    row-gap: 24px;
+  }
+
+  .delete {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

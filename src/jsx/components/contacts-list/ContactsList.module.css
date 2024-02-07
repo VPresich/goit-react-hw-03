@@ -1,0 +1,31 @@
+.contacts-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    width: 375px;
+  }
+  .contacts-list {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contacts-list {
+    gap: 24px;
+  }
+}
