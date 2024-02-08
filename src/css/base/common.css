@@ -16,11 +16,13 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  list-style-type: none;
 }
 
 a {
   color: currentColor;
   text-decoration: none;
+  font-style: normal;
 }
 
 button {
@@ -33,11 +35,10 @@ img {
   height: auto;
 }
 
-.link {
-  text-decoration: none;
-  font-style: normal;
-}
-
-.list {
-  list-style-type: none;
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  min-width: 320px;
+  min-height: 100vh;
 }

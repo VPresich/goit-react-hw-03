@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
 
+import { nanoid } from 'nanoid';
 import { TitleSection } from './titlesection/TitleSection';
 import { ContactsList } from './contacts-list/ContactsList';
 import { SearchBox } from './search-box/SearchBox';
 import { ContactForm } from './contact-form/ContactForm';
 import { contactsData } from '../../data/contactsData';
+import styles from './App.module.css';
 
 export const App = () => {
   const [contacts, setContacts] = useState(contactsData);
@@ -29,7 +30,7 @@ export const App = () => {
   );
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <TitleSection> Phone Book</TitleSection>
       <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={filter} onChange={e => setFilter(e.target.value)} />

@@ -1,16 +1,16 @@
-.item-info {
+.info {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 }
 
-.item-name,
-.item-phone {
+.name,
+.phone {
   font-size: 16px;
   font-weight: 400;
 }
 
-.item-delete {
+.delete {
   cursor: pointer;
   width: auto;
   text-align: center;
@@ -27,23 +27,23 @@
   font-weight: 400;
 }
 
-.item-delete:hover,
-.item-delete:focus {
+.delete:hover,
+.delete:focus {
   background-color: var(--btn-accent-color);
 }
 
 @media screen and (min-width: 768px) {
-  .item-info {
+  .info {
     row-gap: 20px;
   }
 
-  .item-name,
-  .iyem-phone {
+  .name,
+  .phone {
     font-size: 20px;
     font-weight: 500;
   }
 
-  .item-delete {
+  .delete {
     padding-right: 16px;
     padding-left: 16px;
     font-size: 20px;
@@ -51,11 +51,11 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .item-info {
+  .info {
     row-gap: 24px;
   }
 
-  .item-delete {
+  .delete {
     padding-right: 20px;
     padding-left: 20px;
   }

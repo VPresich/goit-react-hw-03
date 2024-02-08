@@ -16,30 +16,30 @@ export const ContactForm = ({ onAddContact }) => {
   };
 
   return (
-    <form className={styles['contact-form']} onSubmit={handleSubmit}>
-      <div className={styles['contact-info']}>
-        <label className={styles['contact-label']} htmlFor="nameInput">
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.info}>
+        <label className={styles.label} htmlFor="nameInput">
           Name:
         </label>
         <input
-          className={styles['contact-input']}
+          className={styles.input}
           id="nameInput"
           type="text"
           value={name}
           onChange={event => setName(event.target.value)}
         />
-        <label className={styles['contact-label']} htmlFor="phoneInput">
+        <label className={styles.label} htmlFor="phoneInput">
           Number:
         </label>
         <input
-          className={styles['contact-input']}
+          className={styles.input}
           id="phoneInput"
           type="text"
           value={number}
           onChange={event => setPhone(event.target.value)}
         />
       </div>
-      <button className={styles['add-button']} type="submit">
+      <button className={styles.add} type="submit">
         Add Contact
       </button>
     </form>
