@@ -4,16 +4,16 @@ import { FaUser, FaPhone } from 'react-icons/fa';
 export const ContactItem = ({ contact, onDeleteContact }) => {
   return (
     <>
-      <div className={styles.info}>
-        <p className={styles.name}>
+      <div className={styles['item-info']}>
+        <p className={styles['item-name']}>
           <FaUser /> {contact.name}
         </p>
-        <p className={styles.phone}>
+        <p className={styles['item-number']}>
           <FaPhone /> {contact.number}
         </p>
       </div>
       <button
-        className={styles.delete}
+        className={styles['item-delete']}
         onClick={() => onDeleteContact(contact.id)}
       >
         Delete

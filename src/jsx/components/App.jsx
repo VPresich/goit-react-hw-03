@@ -5,7 +5,7 @@ import { TitleSection } from './titlesection/TitleSection';
 import { ContactsList } from './contacts-list/ContactsList';
 import { SearchBox } from './search-box/SearchBox';
 import { ContactForm } from './contact-form/ContactForm';
-import contactsData from './contactsData';
+import { contactsData } from '../../data/contactsData';
 
 export const App = () => {
   const [contacts, setContacts] = useState(contactsData);

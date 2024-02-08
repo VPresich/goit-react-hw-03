@@ -2,17 +2,17 @@ import styles from './SearchBox.module.css';
 
 export const SearchBox = ({ value, onChange }) => {
   return (
-    <div className={styles.searchbox}>
-      <label className={styles.label} htmlFor="searchInput">
+    <form className={styles['searchbox']}>
+      <label className={styles['search-label']} htmlFor="searchInput">
         Find contacts by name:
       </label>
       <input
-        className={styles.input}
+        className={styles['search-input']}
         id="searchInput"
         type="text"
         value={value}
         onChange={onChange}
       />
-    </div>
+    </form>
   );
 };

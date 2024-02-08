@@ -1,13 +1,14 @@
-.contacts-list {
+.contacts {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 16px;
 }
 
 .contact {
-  display: flex;
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px;
@@ -16,16 +17,15 @@
 }
 
 @media screen and (min-width: 768px) {
-  .contact {
+  .contacts {
     width: 375px;
-  }
-  .contacts-list {
+    padding: 24px;
     gap: 20px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .contacts-list {
+  .contacts {
     gap: 24px;
   }
 }
