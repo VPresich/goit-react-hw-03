@@ -1,14 +1,16 @@
+import { useId } from 'react';
 import styles from './SearchBox.module.css';
 
-export const SearchBox = ({ value, onChange }) => {
+export const SearchBox = ({ value, onChange, children }) => {
+  const searchId = useId();
   return (
     <form className={styles.searchbox}>
-      <label className={styles.label} htmlFor="searchInput">
-        Find contacts by name:
+      <label className={styles.label} htmlFor={searchId}>
+        {children}
       </label>
       <input
         className={styles.input}
-        id="searchInput"
+        id={searchId}
         type="text"
         value={value}
         onChange={onChange}

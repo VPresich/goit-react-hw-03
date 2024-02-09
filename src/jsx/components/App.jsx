@@ -5,7 +5,10 @@ import { TitleSection } from './titlesection/TitleSection';
 import { ContactsList } from './contacts-list/ContactsList';
 import { SearchBox } from './search-box/SearchBox';
 import { ContactForm } from './contact-form/ContactForm';
-import { contactsData } from '../../data/contactsData';
+
+import { contactsData } from '../auxiliary/contactsData';
+import { SEARCH_LABEL, TITLE } from '../auxiliary/constants';
+
 import styles from './App.module.css';
 
 export const App = () => {
@@ -25,15 +28,22 @@ export const App = () => {
     );
   };
 
+  const handleChangeSearch = event => {
+    setFilter(event.target.value);
+  };
+
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
   );
 
   return (
     <div className={styles.container}>
-      <TitleSection> Phone Book</TitleSection>
+      <TitleSection>{TITLE}</TitleSection>
       <ContactForm onAddContact={handleAddContact} />
-      <SearchBox value={filter} onChange={e => setFilter(e.target.value)} />
+      <SearchBox value={filter} onChange={handleChangeSearch}>
+        {SEARCH_LABEL}
+      </SearchBox>
+
       <ContactsList
         contacts={filteredContacts}
         onDeleteContact={handleDeleteContact}
