@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './ContactForm.module.css';
+import { CustomButton } from '../custom-button/CustomButton';
 
 export const ContactForm = ({ onAddContact }) => {
   const [name, setName] = useState('');
@@ -39,9 +40,7 @@ export const ContactForm = ({ onAddContact }) => {
           onChange={event => setPhone(event.target.value)}
         />
       </div>
-      <button className={styles.add} type="submit">
-        Add Contact
-      </button>
+      <CustomButton type="submit">Add Contact</CustomButton>
     </form>
   );
 };
