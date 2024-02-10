@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import { INIT_CONTACT } from '../../auxiliary/constants';
+import { INITIAL_CONTACT } from '../../auxiliary/constants';
 import { FeedbackSchema } from '../../auxiliary/feedback-schema';
 
 import {
@@ -24,7 +24,7 @@ export const ContactForm = ({ onAddContact }) => {
 
   return (
     <Formik
-      initialValues={INIT_CONTACT}
+      initialValues={INITIAL_CONTACT}
       onSubmit={handleSubmit}
       validationSchema={FeedbackSchema}
     >
