@@ -44,7 +44,9 @@ export const ContactForm = ({ onAddContact, children }) => {
               type="text"
               name="name"
             />
-            <ErrorMessage className={styles.error} name="name" as="span" />
+            <span className={styles.error}>
+              <ErrorMessage name="name" as="span" />
+            </span>
           </div>
           <div>
             <label className={styles.label} htmlFor={phoneId}>
@@ -56,7 +58,9 @@ export const ContactForm = ({ onAddContact, children }) => {
               type="tel"
               name="number"
             />
-            <ErrorMessage className={styles.error} name="number" as="span" />
+            <span className={styles.error}>
+              <ErrorMessage className={styles.error} name="number" as="span" />
+            </span>
           </div>
         </div>
         <CustomButton typeBtn="submit">{children}</CustomButton>
