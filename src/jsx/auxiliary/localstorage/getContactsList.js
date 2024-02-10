@@ -3,7 +3,7 @@ import { contactsData } from '../contactsData';
 
 export const getContactsList = () => {
   const strSavedData = localStorage.getItem(KEY_LOCALSTORAGE);
-  const initialContacts = strSavedData && JSON.parse(strSavedData);
-
+  if (!strSavedData) return contactsData;
+  const initialContacts = JSON.parse(strSavedData);
   return initialContacts.length ? initialContacts : contactsData;
 };
