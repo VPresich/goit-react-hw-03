@@ -1,12 +1,9 @@
 import styles from './ContactItem.module.css';
 import { FaUser, FaPhone } from 'react-icons/fa';
-import { CustomButton } from '../custom-button/CustomButton';
+import CustomButton from '../custom-button/CustomButton';
 import { CAPTION_DELETE } from '../../auxiliary/constants';
 
-export const ContactItem = ({
-  contact: { id, name, number },
-  onDeleteContact,
-}) => {
+const ContactItem = ({ contact: { id, name, number }, onDeleteContact }) => {
   return (
     <>
       <div className={styles.info}>
@@ -23,3 +20,5 @@ export const ContactItem = ({
     </>
   );
 };
+
+export default ContactItem;

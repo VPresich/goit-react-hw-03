@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 import { nanoid } from 'nanoid';
-import { TitleSection } from './titlesection/TitleSection';
-import { ContactsList } from './contacts-list/ContactsList';
-import { SearchBox } from './search-box/SearchBox';
-import { ContactForm } from './contact-form/ContactForm';
+import TitleSection from './titlesection/TitleSection';
+import ContactsList from './contacts-list/ContactsList';
+import SearchBox from './search-box/SearchBox';
+import ContactForm from './contact-form/ContactForm';
 
 import { getContactsList } from '../auxiliary/localstorage/getContactsList';
 import { saveContactsList } from '../auxiliary/localstorage/saveContactsList';
@@ -13,7 +13,7 @@ import { SEARCH_LABEL, TITLE } from '../auxiliary/constants';
 
 import styles from './App.module.css';
 
-export const App = () => {
+const App = () => {
   const [contacts, setContacts] = useState(getContactsList);
   const [filter, setFilter] = useState('');
 
@@ -56,3 +56,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;

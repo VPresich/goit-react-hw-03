@@ -10,10 +10,10 @@ import {
   CAPTION_ADD,
 } from '../../auxiliary/constants';
 
-import { CustomButton } from '../custom-button/CustomButton';
+import CustomButton from '../custom-button/CustomButton';
 import styles from './ContactForm.module.css';
 
-export const ContactForm = ({ onAddContact }) => {
+const ContactForm = ({ onAddContact }) => {
   const nameId = useId();
   const phoneId = useId();
 
@@ -64,3 +64,5 @@ export const ContactForm = ({ onAddContact }) => {
     </Formik>
   );
 };
+
+export default ContactForm;

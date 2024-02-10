@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import styles from './SearchBox.module.css';
 
-export const SearchBox = ({ value, onChange, children }) => {
+const SearchBox = ({ value, onChange, children }) => {
   const searchId = useId();
   return (
     <form className={styles.searchbox}>
@@ -18,3 +18,5 @@ export const SearchBox = ({ value, onChange, children }) => {
     </form>
   );
 };
+
+export default SearchBox;
