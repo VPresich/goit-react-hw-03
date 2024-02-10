@@ -9,12 +9,7 @@ import { ContactForm } from './contact-form/ContactForm';
 import { getContactsList } from '../auxiliary/localstorage/getContactsList';
 import { saveContactsList } from '../auxiliary/localstorage/saveContactsList';
 
-import {
-  SEARCH_LABEL,
-  TITLE,
-  CAPTION_ADD,
-  CAPTION_DELETE,
-} from '../auxiliary/constants';
+import { SEARCH_LABEL, TITLE } from '../auxiliary/constants';
 
 import styles from './App.module.css';
 
@@ -50,16 +45,14 @@ export const App = () => {
   return (
     <div className={styles.container}>
       <TitleSection>{TITLE}</TitleSection>
-      <ContactForm onAddContact={handleAddContact}>{CAPTION_ADD}</ContactForm>
+      <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={filter} onChange={handleChangeSearch}>
         {SEARCH_LABEL}
       </SearchBox>
       <ContactsList
         contacts={filteredContacts}
         onDeleteContact={handleDeleteContact}
-      >
-        {CAPTION_DELETE}
-      </ContactsList>
+      />
     </div>
   );
 };

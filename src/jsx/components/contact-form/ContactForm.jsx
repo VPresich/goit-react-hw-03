@@ -1,23 +1,19 @@
 import { useId } from 'react';
-import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+
 import { INIT_CONTACT } from '../../auxiliary/constants';
+import { FeedbackSchema } from '../../auxiliary/feedback-schema';
+
+import {
+  LABEL_NAME,
+  LABEL_PHONE,
+  CAPTION_ADD,
+} from '../../auxiliary/constants';
 
 import { CustomButton } from '../custom-button/CustomButton';
 import styles from './ContactForm.module.css';
 
-const FeedbackSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(3, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  number: Yup.string()
-    .min(3, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-});
-
-export const ContactForm = ({ onAddContact, children }) => {
+export const ContactForm = ({ onAddContact }) => {
   const nameId = useId();
   const phoneId = useId();
 
@@ -36,7 +32,7 @@ export const ContactForm = ({ onAddContact, children }) => {
         <div className={styles.info}>
           <div>
             <label className={styles.label} htmlFor={nameId}>
-              Name:
+              {LABEL_NAME}
             </label>
             <Field
               className={styles.input}
@@ -50,7 +46,7 @@ export const ContactForm = ({ onAddContact, children }) => {
           </div>
           <div>
             <label className={styles.label} htmlFor={phoneId}>
-              Number:
+              {LABEL_PHONE}
             </label>
             <Field
               className={styles.input}
@@ -59,11 +55,11 @@ export const ContactForm = ({ onAddContact, children }) => {
               name="number"
             />
             <span className={styles.error}>
-              <ErrorMessage className={styles.error} name="number" as="span" />
+              <ErrorMessage name="number" as="span" />
             </span>
           </div>
         </div>
-        <CustomButton typeBtn="submit">{children}</CustomButton>
+        <CustomButton typeBtn="submit">{CAPTION_ADD}</CustomButton>
       </Form>
     </Formik>
   );
