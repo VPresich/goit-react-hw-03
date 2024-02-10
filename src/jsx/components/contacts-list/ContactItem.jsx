@@ -5,6 +5,7 @@ import { CustomButton } from '../custom-button/CustomButton';
 export const ContactItem = ({
   contact: { id, name, number },
   onDeleteContact,
+  children,
 }) => {
   return (
     <>
@@ -17,7 +18,7 @@ export const ContactItem = ({
         </p>
       </div>
       <CustomButton onClick={() => onDeleteContact(id)} typeBtn={'button'}>
-        Delete
+        {children}
       </CustomButton>
     </>
   );
