@@ -11,12 +11,5 @@ export const getContactsList = () => {
   if (!strSavedData) return contactsData;
   const localData = JSON.parse(strSavedData);
   if (!localData.length && devMode) return contactsData;
-
   return localData;
-
-  // if (window.DEV_MODE) {
-  //   return (strSavedData && JSON.parse(strSavedData)) || contactsData;
-  // } else {
-  //   return (strSavedData && JSON.parse(strSavedData)) || [];
-  // }
 };
